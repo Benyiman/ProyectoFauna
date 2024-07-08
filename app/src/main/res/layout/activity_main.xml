@@ -11,39 +11,82 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#1A4024">
+        android:background="#D9CE9A">
 
-        <Button
-            android:id="@+id/toggleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="395dp"
+            android:layout_height="675dp"
+            android:layout_below="@id/toggleButton"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_margin="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:columnCount="2"
+            tools:ignore="UnknownId">
 
-            android:text="Lista desplegable"
-            android:textColor="#FFFFFF" />
+            <ImageView
+                android:id="@+id/imageHuemul"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/huemul"
+                android:scaleType="centerCrop"
+                android:src="@drawable/huemul" />
+
+            <ImageView
+                android:id="@+id/imagePuma"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/puma"
+                android:scaleType="centerCrop"
+                android:src="@drawable/puma" />
+
+            <ImageView
+                android:id="@+id/imageSeaWolf"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/sea_wolf"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sea_wolf" />
+
+            <ImageView
+                android:id="@+id/imageFox"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/fox"
+                android:scaleType="centerCrop"
+                android:src="@drawable/fox" />
+
+            <ImageView
+                android:id="@+id/imageBuhoReal"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/buho_real"
+                android:scaleType="centerCrop"
+                android:src="@drawable/buho_real" />
+
+        </GridLayout>
 
 
-
-        <ListView
-            android:id="@+id/listView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/toggleButton"
-            android:background="#D9AA1E"
-            android:divider="@android:color/darker_gray"
-            android:dividerHeight="1dp"
-            android:padding="8dp"
-
-            android:visibility="gone" />
-
-        <WebView
-            android:id="@+id/webview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/listView"
-            android:layout_marginTop="16dp" />
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

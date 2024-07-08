@@ -1,29 +1,12 @@
 package cl.isisur.proyectofaunauble;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListView;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
+import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private WebView webView;
-    private ListView listView;
-    private Button toggleButton;
-    private boolean isListViewVisible = false;
-
-    private String[] modelNames = {
-            "Huemul",
-            "Puma",
-            "Sea Wolf",
-            "Fox",
-            "Buho Real"
-    };
 
     private String[] modelUrls = {
             "https://sketchfab.com/models/b529efcc9f8c451cbeae6458124ff462/embed",
@@ -38,48 +21,46 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        webView = findViewById(R.id.webview);
-        listView = findViewById(R.id.listView);
-        toggleButton = findViewById(R.id.toggleButton);
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, modelNames);
-        listView.setAdapter(adapter);
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        // Set up click listeners for each image
+        findViewById(R.id.imageHuemul).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                loadModel(modelUrls[position]);
+            public void onClick(View v) {
+                loadModel(modelUrls[0]);
             }
         });
 
-        WebSettings webSettings = webView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-
-        toggleButton.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.imagePuma).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (isListViewVisible) {
-                    listView.setVisibility(View.GONE);
-                    isListViewVisible = false;
-                } else {
-                    listView.setVisibility(View.VISIBLE);
-                    isListViewVisible = true;
-                }
+                loadModel(modelUrls[1]);
+            }
+        });
+
+        findViewById(R.id.imageSeaWolf).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadModel(modelUrls[2]);
+            }
+        });
+
+        findViewById(R.id.imageFox).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadModel(modelUrls[3]);
+            }
+        });
+
+        findViewById(R.id.imageBuhoReal).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadModel(modelUrls[4]);
             }
         });
     }
 
     private void loadModel(String url) {
-        webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl(url);
-    }
-
-    @Override
-    public void onBackPressed() {
-        if (webView.canGoBack()) {
-            webView.goBack();
-        } else {
-            super.onBackPressed();
-        }
+        Intent intent = new Intent(MainActivity.this, Vizualizacion.class);
+        intent.putExtra("modelUrl", url);
+        startActivity(intent);
     }
 }
