@@ -5,33 +5,36 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Inicio"
-    android:padding="16dp">
+    android:background="@drawable/fondo"
+    android:padding="16dp"
+    tools:context=".Inicio">
+
 
     <TextView
         android:id="@+id/textViewWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bienvenido"
-        android:textSize="24sp"
+        android:text="Bienvenido a fauna Ñuble"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="48sp"
         android:textStyle="bold"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
         android:id="@+id/textViewDescription"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/buho_real"
+        android:layout_width="378dp"
+        android:layout_height="189dp"
+        android:layout_marginTop="100dp"
+        android:background="@color/verdecito"
         android:padding="16dp"
-
         android:text="Este proyecto muestra información sobre la fauna de Ñuble. Puedes ver modelos 3D de diversos animales y aprender más sobre ellos."
-        android:textColor="@color/amar"
-        android:textSize="16sp"
+        android:textColor="@color/fondo"
+        android:textColorLink="#9C6464"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,10 +44,9 @@
         android:id="@+id/buttonGoToMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="168dp"
-        android:text="Ir a Main"
+        android:layout_marginTop="436dp"
+        android:text="Ir a Modelos"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.905"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewDescription" />
 

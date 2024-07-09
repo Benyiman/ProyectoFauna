@@ -13,7 +13,9 @@ public class MainActivity extends AppCompatActivity {
             "https://sketchfab.com/models/8242c1a560e149858844abdd8dd869f9/embed",
             "https://sketchfab.com/models/c1f647a0c8d04f14b43e23ba292ca72f/embed",
             "https://sketchfab.com/models/215b317cabfa42c48fad08d8b9a8fb8d/embed",
-            "https://sketchfab.com/models/fb255e4232d14734aac4d93ed2980160/embed"
+            "https://sketchfab.com/models/fb255e4232d14734aac4d93ed2980160/embed",
+            "https://sketchfab.com/models/90ba3e274ec248d78f23b1beb5da5b08/embed",
+
     };
 
     @Override

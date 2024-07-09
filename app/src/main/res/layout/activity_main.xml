@@ -5,14 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0F2624"
+    android:background="@color/fondo"
     tools:context=".MainActivity">
 
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="408dp"
+        android:layout_height="686dp"
         android:background="@color/fondo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,11 +23,9 @@
 
         <GridLayout
             android:id="@+id/gridLayout"
-            android:layout_width="391dp"
-            android:layout_height="520dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_below="@id/toggleButton"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="121dp"
@@ -48,16 +46,43 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/huemul" />
 
+            <TextView
+                android:id="@+id/textHuemul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_below="@id/imageHuemul"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="@string/huemul"
+                android:textColor="@color/verdemilitar"
+                android:textSize="14sp" />
+
             <ImageView
                 android:id="@+id/imagePuma"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                android:layout_row="0"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
                 android:contentDescription="@string/puma"
                 android:scaleType="centerCrop"
                 android:src="@drawable/puma" />
+
+            <TextView
+                android:id="@+id/textPuma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_below="@id/imagePuma"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="@string/puma"
+                android:textColor="@color/verdemilitar"
+                android:textSize="14sp" />
 
             <ImageView
                 android:id="@+id/imageSeaWolf"
@@ -70,16 +95,43 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/foca" />
 
+            <TextView
+                android:id="@+id/textFoca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:layout_below="@id/imageSeaWolf"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="@string/sea_wolf"
+                android:textColor="@color/verdemilitar"
+                android:textSize="14sp" />
+
             <ImageView
                 android:id="@+id/imageFox"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                android:layout_row="1"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
                 android:contentDescription="@string/fox"
                 android:scaleType="centerCrop"
                 android:src="@drawable/zorro" />
+
+            <TextView
+                android:id="@+id/textFox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:layout_below="@id/imageFox"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="@string/fox"
+                android:textColor="@color/verdemilitar"
+                android:textSize="14sp" />
 
             <ImageView
                 android:id="@+id/imageBuhoReal"
@@ -93,44 +145,76 @@
                 android:soundEffectsEnabled="false"
                 android:src="@drawable/buho_real" />
 
+            <TextView
+                android:id="@+id/textBuho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="5"
+                android:layout_column="0"
+                android:layout_below="@id/imageBuhoReal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="@string/buho_real"
+                android:textColor="@color/verdemilitar"
+                android:textSize="14sp" />
+
             <ImageView
                 android:id="@+id/imageCondor"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                android:layout_row="1"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
-                android:contentDescription="@string/buho_real"
                 android:scaleType="centerCrop"
                 android:soundEffectsEnabled="false"
                 android:src="@drawable/condor" />
+
+            <TextView
+                android:id="@+id/textCondor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="5"
+                android:layout_column="1"
+                android:layout_below="@id/imageCondor"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="@string/condor"
+                android:textColor="@color/verdemilitar"
+                android:textSize="14sp" />
 
         </GridLayout>
 
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="138dp"
-            android:layout_height="70dp"
+            android:layout_width="216dp"
+            android:layout_height="75dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="149dp"
+            android:layout_marginStart="98dp"
             android:layout_marginTop="27dp"
-            android:text="Fauna Ñuble" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="287dp"
-            android:layout_marginBottom="113dp"
-            android:text="Inicio"
-            android:textColor="@color/botones"
-            android:textColorLink="@color/botones" />
+            android:text="Fauna Ñuble"
+            android:textAlignment="center"
+            android:textColor="@color/verdemilitar"
+            android:textSize="34sp" />
 
 
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Inicio"
+        android:textColor="@color/botones"
+        android:textColorLink="@color/botones"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.528" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
