@@ -2,8 +2,8 @@
     <string name="app_name">ProyectoFaunaÑuble</string>
     <string name="huemul">Huemul</string>
     <string name="puma">Puma</string>
-    <string name="sea_wolf">Sea Wolf</string>
-    <string name="fox">Fox</string>
+    <string name="sea_wolf">Lobo marino</string>
+    <string name="fox">Zorro culpeo</string>
     <string name="buho_real">Búho Real</string>
     <string name="condor">Condor</string>
 </resources>
