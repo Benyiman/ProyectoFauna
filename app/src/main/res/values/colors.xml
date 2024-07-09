@@ -3,5 +3,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="amar">#A66933</color>
+    <color name="fondo">#0A1626</color>
+    <color name="botones">#162624</color>
+    <color name="verdecito">#7F8C72</color>
+    <color name="verdemilitar">#868C56</color>
+    <color name="cafe">#594731</color>
 
 </resources>

@@ -22,40 +22,31 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Set up click listeners for each image
-        findViewById(R.id.imageHuemul).setOnClickListener(new View.OnClickListener() {
+        setImageClickListener(R.id.imageHuemul, modelUrls[0]);
+        setImageClickListener(R.id.imagePuma, modelUrls[1]);
+        setImageClickListener(R.id.imageSeaWolf, modelUrls[2]);
+        setImageClickListener(R.id.imageFox, modelUrls[3]);
+        setImageClickListener(R.id.imageBuhoReal, modelUrls[4]);
+        setImageClickListener(R.id.imageCondor, modelUrls[5]);
+
+        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadModel(modelUrls[0]);
+                Intent intent = new Intent(MainActivity.this, Inicio.class);
+                startActivity(intent);
             }
         });
 
-        findViewById(R.id.imagePuma).setOnClickListener(new View.OnClickListener() {
+    }
+
+    private void setImageClickListener(int imageViewId, final String url) {
+        findViewById(imageViewId).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadModel(modelUrls[1]);
+                loadModel(url);
             }
         });
 
-        findViewById(R.id.imageSeaWolf).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                loadModel(modelUrls[2]);
-            }
-        });
-
-        findViewById(R.id.imageFox).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                loadModel(modelUrls[3]);
-            }
-        });
-
-        findViewById(R.id.imageBuhoReal).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                loadModel(modelUrls[4]);
-            }
-        });
     }
 
     private void loadModel(String url) {
